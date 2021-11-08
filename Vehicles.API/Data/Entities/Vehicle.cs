@@ -56,7 +56,6 @@ namespace Vehicles.API.Data.Entities
         [Display(Name = "# Fotos")]
         public int VehiclePhotosCount => VehiclePhotos == null ? 0 : VehiclePhotos.Count;
 
-        //TODO: PENDIENTE PATH DE FOTOS VEHICLES
         [Display(Name = "Foto")]
         public string ImageFullPath => VehiclePhotos == null || VehiclePhotos.Count == 0
         ? $"https://localhost:44396/images/noimage.png"

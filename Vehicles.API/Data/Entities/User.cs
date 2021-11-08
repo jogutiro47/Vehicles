@@ -36,12 +36,10 @@ namespace Vehicles.API.Data.Entities
         [Display(Name = "Foto")]
         public Guid ImageId { get; set; }
 
-        //TODO: FIX URL DE IMAGEN
-
         [Display(Name = "Foto")]
         public string ImageFullPath => ImageId == Guid.Empty
             ? $"https://localhost:44396/images/noimage.png"
-            : $"https://vehiclessalazar.blob.core.windows.net/users/{ImageId}";
+            : $"https://vehiclesmonteria.blob.core.windows.net/users/{ImageId}";
 
         
         [Display(Name = "Tipo de usuario")]

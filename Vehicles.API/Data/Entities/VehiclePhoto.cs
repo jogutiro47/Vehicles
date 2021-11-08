@@ -16,10 +16,9 @@ namespace Vehicles.API.Data.Entities
         public Guid ImageId { get; set; }
 
 
-        //TODO: CORREGIR PATH DE PHOTOS
         [Display(Name = "Foto")]
         public string ImageFullPath => ImageId == Guid.Empty
             ? $"https://localhost:44396/images/noimage.png"
-            : $"https://vehiclessalazar.blob.core.windows.net/vehicles/{ImageId}";
+            : $"https://vehiclesmonteria.blob.core.windows.net/vehicles/{ImageId}";
     }
 }
