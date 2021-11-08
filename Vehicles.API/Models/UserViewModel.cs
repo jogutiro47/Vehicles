@@ -58,11 +58,11 @@ namespace Vehicles.API.Models
 
         public IEnumerable<SelectListItem> DocumentTypes { get; set; }
         
-        /*
+        
         [Display(Name = "Foto")]
         public string ImageFullPath => ImageId == Guid.Empty
-            ? $"https://vehicleszulu.azurewebsites.net/images/noimage.png"
-            : $"https://vehicleszulu.blob.core.windows.net/users/{ImageId}";
-        */
+            ? $"https://localhost:44396/images/noimage.png"
+            : $"https://vehiclesmonteria.blob.core.windows.net/users/{ImageId}";
+
     }
 }
