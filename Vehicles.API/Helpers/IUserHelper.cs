@@ -34,9 +34,9 @@ namespace Vehicles.API.Helpers
 
          Task LogoutAsync();
 
-        /*
+        
          Task<IdentityResult> ChangePasswordAsync(User user, string oldPassword, string newPassword);
-
+        
          Task<string> GenerateEmailConfirmationTokenAsync(User user);
 
          Task<IdentityResult> ConfirmEmailAsync(User user, string token);
@@ -45,6 +45,6 @@ namespace Vehicles.API.Helpers
 
          Task<IdentityResult> ResetPasswordAsync(User user, string token, string password);
 
-         Task<SignInResult> ValidatePasswordAsync(User user, string password);*/
+        /* Task<SignInResult> ValidatePasswordAsync(User user, string password);*/
     }
 }

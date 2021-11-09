@@ -28,8 +28,10 @@ namespace Vehicles.API
 
             services.AddIdentity<User, IdentityRole>(x =>
             {
-                /*x.Tokens.AuthenticatorTokenProvider = TokenOptions.DefaultAuthenticatorProvider;
-                x.SignIn.RequireConfirmedEmail = true;*/
+                /*Confirmacipon por email para la creación de usuarios */
+                x.Tokens.AuthenticatorTokenProvider = TokenOptions.DefaultAuthenticatorProvider;
+                x.SignIn.RequireConfirmedEmail = true;
+
                 x.User.RequireUniqueEmail = true;
                 x.Password.RequireDigit = false;
                 x.Password.RequiredUniqueChars = 0;
@@ -37,7 +39,7 @@ namespace Vehicles.API
                 x.Password.RequireNonAlphanumeric = false;
                 x.Password.RequireUppercase = false;
             })
-                /*.AddDefaultTokenProviders()*/
+                .AddDefaultTokenProviders()
                 .AddEntityFrameworkStores<DataContext>();
 
 
@@ -59,7 +61,7 @@ namespace Vehicles.API
             services.AddScoped<ICombosHelper, CombosHelper>();
             services.AddScoped<IBlobHelper, BlobHelper>();
             services.AddScoped<IConverterHelper, ConverterHelper>();
-            /*services.AddScoped<IMailHelper, MailHelper>();*/
+            services.AddScoped<IMailHelper, MailHelper>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
