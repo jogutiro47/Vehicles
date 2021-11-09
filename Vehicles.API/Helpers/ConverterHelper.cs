@@ -17,7 +17,7 @@ namespace Vehicles.API.Helpers
             _combosHelper = combosHelper;
         }
 
-       /* public async Task<Detail> ToDetailAsync(DetailViewModel model, bool isNew)
+        public async Task<Detail> ToDetailAsync(DetailViewModel model, bool isNew)
         {
             return new Detail
             {
@@ -42,7 +42,7 @@ namespace Vehicles.API.Helpers
                 Remarks = detail.Remarks,
                 SparePartsPrice = detail.SparePartsPrice
             };
-        }*/
+        }
 
         public async Task<User> ToUserAsync(UserViewModel model, Guid imageId, bool isNew)
         {
@@ -80,7 +80,7 @@ namespace Vehicles.API.Helpers
                 UserType = user.UserType,
             };
         }
-        /*
+        
         public async Task<Vehicle> ToVehicleAsync(VehicleViewModel model, bool isNew)
         {
             return new Vehicle
@@ -113,6 +113,6 @@ namespace Vehicles.API.Helpers
                 VehicleTypeId = vehicle.VehicleType.Id,
                 VehicleTypes = _combosHelper.GetComboVehicleTypes()
             }; 
-        } */
+        } 
     }
 }
